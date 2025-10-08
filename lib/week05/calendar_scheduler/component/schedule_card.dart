@@ -13,6 +13,25 @@ class _Time extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+    final textStyle = TextStyle(
+      fontWeight: FontWeight.w600,
+      color: PRIMARY_COLOR,
+      fontSize: 16.0,
+    );
+
+    return Column(  // 시간을 위에서 아래로 배치
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          // 숫자가 두 자릿수가 안되면 0으로 채워주기
+          '${startTime.toString().padLeft(2, '0')}:00',
+          style: textStyle,
+        ),
+        Text(
+          // 숫자가 두 자릿수가 안 되면 0으로 채워주기
+          '${endTime.toString().padLeft(2, '0')}:00'
+        )
+      ]
+    )
   }
 }
