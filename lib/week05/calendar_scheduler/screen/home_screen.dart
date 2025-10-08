@@ -25,6 +25,19 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // build() 함수 내부 Scaffold 위젯
     return Scaffold(
+      floatingActionButton: FloatingActionButton( // 새 일정 버튼
+        backgroundColor: PRIMARY_COLOR,
+        onPressed: () {
+          showModalBottomSheet( // BottomSheet 열기
+            context: context,
+            isDismissible: true,  // 배경 탭했을 때 bottomSheet 닫기
+            builder: (_) => ScheduleBottomSheet(),
+          );
+        },
+        child: Icon(
+          Icons.add,
+        ),
+      ),
       body: SafeArea(   // 시스템 UI 피해서 UI 구현하기
         child: Column(  // 달력과 리스트를 세로로 배치
           children: [
