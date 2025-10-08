@@ -26,14 +26,41 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                 children: [
                   Expanded(
                     child: CustomTextField( // 시작 시간 입력 필드
-                      
-                    )
-                  )
-                ]
-              )
-            ]
-          )
-        )
+                      label: '시작 시간',
+                      isTime: true,
+                    ),
+                  ),
+                  const SizedBox(width: 16.0),
+                  Expanded(
+                    child: CustomTextField( // 종료 시간 입력 필드
+                      label: '종료 시간',
+                      isTime: true,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 8.0),
+              Expanded(
+                child: CustomTextField(  // 내용 입력 필드
+                  label: '내용',
+                  isTime: false,
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(  // [저장] 버튼
+                  // [저장] 버튼
+                  onPressed: onSavePressed,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: PRIMARY_COLOR,
+                  ),
+                  child: Text('저장'),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
