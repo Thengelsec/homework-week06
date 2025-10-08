@@ -8,7 +8,7 @@ class MainCalendar extends StatelessWidget {
 
   MainCalendar({
     required this.onDaySelected,
-    required this.selectedDate, // 48
+    required this.selectedDate,
   });
 
   @override
