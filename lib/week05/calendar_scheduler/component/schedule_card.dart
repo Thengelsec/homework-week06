@@ -38,4 +38,11 @@ class _Time extends StatelessWidget {
     );
   }
 }
-// _
+// _Time 위젯 바로 아래에 작성
+class _Content extends StatelessWidget {
+  final String content;   // 내용
+
+  const _Content({
+    
+  })
+}
