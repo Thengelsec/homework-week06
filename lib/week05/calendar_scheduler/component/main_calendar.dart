@@ -38,8 +38,15 @@ class MainCalendar extends StatelessWidget {
           fontWeight: FontWeight.w600,
           color: DARK_GREY_COLOR,
         ),
-        
-      )
+        weekendTextStyle: TextStyle(  // 주말 글꼴
+          fontWeight: FontWeight.w600,
+          color: DARK_GREY_COLOR,
+        ),
+        selectedTextStyle: TextStyle( // 선택된 날짜 글꼴
+          fontWeight: FontWeight.w600,
+          color: PRIMARY_COLOR,
+        ),
+      ),
     );
   }
 }
