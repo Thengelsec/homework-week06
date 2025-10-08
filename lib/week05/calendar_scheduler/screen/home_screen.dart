@@ -1,7 +1,8 @@
 import 'package:myapp/week05/calendar_scheduler/component/main_calendar.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  // StatelessWidget에서 StatefulWidget으로 전환
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
