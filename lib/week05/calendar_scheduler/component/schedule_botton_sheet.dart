@@ -12,8 +12,9 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        height: MediaQuery.of(context).size.height / 2,
-      )
-    )
+        height: MediaQuery.of(context).size.height / 2, //
+        color: Colors.white,
+      ),
+    );
   }
 }
