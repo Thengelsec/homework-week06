@@ -14,9 +14,10 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
   Widget build(BuildContext context) {
     // 키보드 높이 가져오기
     final bottomInset = MediaQuery.of(context).viewInsets.bottom;
-    
+
     return SafeArea(
       child: Container(
+        // 화면에 반 높이에 키보드 높이 추가하기
         height: MediaQuery.of(context).size.height / 2, //
         color: Colors.white,
         child: Padding(
