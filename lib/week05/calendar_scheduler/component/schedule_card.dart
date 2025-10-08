@@ -29,9 +29,12 @@ class _Time extends StatelessWidget {
         ),
         Text(
           // 숫자가 두 자릿수가 안 되면 0으로 채워주기
-          '${endTime.toString().padLeft(2, '0')}:00'
-        )
-      ]
-    )
+          '${endTime.toString().padLeft(2, '0')}:00',
+          style: textStyle.copyWith(
+            fontSize: 10.0,
+          ),
+        ),
+      ],
+    );
   }
 }
