@@ -26,7 +26,13 @@ class CustomTextField extends StatelessWidget {
         ),
         Expanded(
           flex: isTime ? 0 : 1, //
-          
+          child: TextFormField(
+            cursorColor: Colors.grey,   // 커서 색상 변경
+            maxLines: isTime ? 1 : null,
+            // 시간 관련 텍스트 필드가 아니면 한 줄 이상 작성 가능
+            expands: !isTime, // 시간 관련 텍스트 필드는 공간 최대 차지
+            keyboardType: isTime ? TextInputType.number : TextInputType
+          )
         )
       ]
     )
