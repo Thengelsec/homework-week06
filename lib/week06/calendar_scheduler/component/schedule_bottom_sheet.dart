@@ -60,13 +60,16 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                     backgroundColor: PRIMARY_COLOR,
                   ),
                   child: Text('저장'),
-                )
-              )
-            ]
-          )
-        )
-      )
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
-    )
+  void onSavePressed() {
+    
   }
 }
