@@ -15,10 +15,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  DateTime selectedData = DateTime.utc( // 선택된 날짜를 관리할 변수
+  DateTime selectedDate = DateTime.utc( // 선택된 날짜를 관리할 변수
     DateTime.now().year,
     DateTime.now().month,
-    DataTime.now().day,
+    DateTime.now().day,
   );
 
   @override
