@@ -16,7 +16,7 @@ void main() async {
 
   runApp(
     MaterialApp(
-      home: homeScreen(),
+      home: HomeScreen(),
     ),
   );
 }
