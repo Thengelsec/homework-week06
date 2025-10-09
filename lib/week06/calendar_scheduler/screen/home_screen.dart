@@ -6,10 +6,26 @@ import 'package:myapp/week06/calendar_scheduler/component/schedule_bottom_sheet.
 import 'package:myapp/week05/calendar_scheduler/const/colors.dart';
 
 
-class HomeScreen extedns StatefulWidget {
+class HomeScreen extends StatefulWidget {
   // StatelessWidget에서 StatefulWidget으로 전환
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  DateTime selectedData = DateTime.utc( // 선택된 날짜를 관리할 변수
+    DateTime.now().year,
+    DateTime.now().month,
+    DataTime.now().day,
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    // build() 함수 내부 Scaffold 위젯
+    return Scaffold(
+      
+    )
+  }
 }
