@@ -10,5 +10,9 @@ void main() async {
 
   await initializedDateFormatting();  // intl 패키지 초기화(다국어화)
 
-  
+  runApp(
+    MaterialApp(
+      home: home_screen(),
+    ),
+  );
 }
