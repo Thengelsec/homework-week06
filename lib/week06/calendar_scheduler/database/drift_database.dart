@@ -14,8 +14,6 @@ part 'drift_database.g.dart';   // part 파일 지정
     Schedules,
   ],
 )
-class LocalDatabase extends _$LocalDatabase {}
-// Code Generation으로 생성할 클래스 상속
 
 class LocalDatabase extends _$LocalDatabase {
   Stream<List<Schedule>> watchSchedules(DateTime data) =>
@@ -34,3 +32,4 @@ class LocalDatabase extends _$LocalDatabase {
   @override
   int get schemaVersion => 1;
 }
+// Code Generation으로 생성할 클래스 상속
