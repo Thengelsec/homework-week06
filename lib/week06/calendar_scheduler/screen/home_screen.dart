@@ -61,10 +61,17 @@ class _HomeScreenState extends State<HomeScreen> {
               startTime: 12,
               endTime: 14,
               content: '프로그래밍 공부',
-            )
-          ]
-        )
-      )
-    )
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+  void onDaySelected(DateTime selectedDate, DateTime focusedDate) {
+
+    // 날짜 선택될 때마다 실행할 함수
+    setState(() {
+      this.selectedDate = selectedDate;
+    });
   }
 }
