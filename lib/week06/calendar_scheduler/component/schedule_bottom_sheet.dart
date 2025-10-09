@@ -39,10 +39,11 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
                     child: CustomTextField( // 종료 시간 입력 필드
                       label: '종료 시간',
                       isTime: true,
-                    )
-                  )
-                ]
-              )
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox()
             ]
           )
         )
