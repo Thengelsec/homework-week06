@@ -56,11 +56,21 @@ class _HomeScreenState extends State<HomeScreen> {
               onDaySelected: onDaySelected,
             ),
             SizedBox(height: 8.0),
-            TodayBanner(  // 배너 추가하기
-              selectedDate: selectedDate,
-              count: 0,
+            StreamBuilder<List<Schedule>>(  // 일정 Stream으로 받아오기
+              stream: GetIt.I<LocalDatabase>().watchSchedules(selectedDate),
+              builder: (context, snapshot) {
+                return TodayBanner(
+                  selectedDate: selectedDate,
+                  count: snapshot.data?.length ?? 0,  // 일정 개수 입력해주기
+                );
+              }
             ),
             SizedBox(height: 8.0),
+            // TodayBanner(  // 배너 추가하기
+            //   selectedDate: selectedDate,
+            //   count: 0,
+            // ),
+            // SizedBox(height: 8.0),
             Expanded( // 남는 공간을 모두 차지하기
               // 일정 정보가 Stream으로 제공되기 때문에 StreamBuilder 사용
               child: StreamBuilder<List<Schedule>>(
