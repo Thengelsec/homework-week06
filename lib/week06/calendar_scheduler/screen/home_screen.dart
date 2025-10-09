@@ -61,6 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
               count: 0,
             ),
             SizedBox(height: 8.0),
+            /// 222222222222 여기
             ScheduleCard( // 구현해둔 일정 카드
               startTime: 12,
               endTime: 14,
