@@ -95,9 +95,32 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
 
   }
   // 미리 정의해둔 함수
-  String? timeValidator(String? val) {
-    
+  String? timeValidator(String? val) {  // 시간 검증 함수
+    if (val == null) {
+      return '값을 입력해주세요';
+    }
+
+    int? number;
+
+    try {
+      number = int.parse(val);
+    } catch (e) {
+      return '숫자를 입력해주세요';
+    }
+
+    if (number < 0 || number > 24) {
+      return '0시부터 24시 사이를 입력해주세요';
+    }
+
+    return null;
   }   // 시간값 검증
 
-  String? contentValidator(String? val) {}  // 내용값 검증
+  // 미리 정의해둔 함수
+  String? contentValidator(String? val) { // 내용 검증 함수
+    if(val == null || val.length == 0){
+      return '값을 입력해주세요';
+    }
+
+    return null;
+  }  // 내용값 검증
 }
