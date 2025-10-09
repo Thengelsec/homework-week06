@@ -32,9 +32,24 @@ class _HomeScreenState extends State<HomeScreen> {
             context: context,
             isDismissible: true,  // 배경 탭했을 때 bottomSheet 닫기
             builder: (_) => ScheduleBottomSheet(),
-            
-          )
-        }
+            // BottomSheet의 높이를 화면의 최대 높이로
+            // 정의하고 스크롤 가능하게 변경
+            isScrollControlled: true,
+          );
+        },
+        child: Icon(
+          Icons.add,
+        ),
+      ),
+      body: SafeArea( // 시스템 UI 피해서 UI 구현하기
+        child: Column(  // 달력과 리스트를 세로로 배치
+          children: [
+            // 미리 작업해둔 달력 위젯 보여주기
+            MainCalendar(
+              selectedDate: selectedDate, // 선택된 날짜 전달하기
+            )
+          ]
+        )
       )
     )
   }
