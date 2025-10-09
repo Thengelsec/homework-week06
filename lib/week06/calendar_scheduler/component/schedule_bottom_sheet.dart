@@ -99,6 +99,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
       print(startTime); // 시작 시간 출력
       print(endTime);   // 종료 시간 출력
       print(content);   // 내용 출력
+      
     }
   }
 
