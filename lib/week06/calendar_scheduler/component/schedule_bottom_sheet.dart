@@ -1,6 +1,10 @@
 import 'package:myapp/week06/calendar_scheduler/component/custom_text_field.dart';
 import 'package:myapp/week05/calendar_scheduler/const/colors.dart';
 import 'package:flutter/material.dart';
+// material.dart 패키지의 Column 클래스와 중복되니 드리프트에서는 숨기기
+import 'package:drift/drift.dart' hide Column
+import 'package:get_it/get_it.dart';
+import 'package:myapp/week06/calendar_scheduler/database/drift_database.dart';
 
 class ScheduleBottomSheet extends StatefulWidget {
   final DateTime selectedDate;    // 선택된 날짜 상위 위젯에서 입력받기
