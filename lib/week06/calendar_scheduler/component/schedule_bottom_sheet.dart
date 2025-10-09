@@ -91,9 +91,17 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
     );
   }
 
+  // 미리 정의해둔 함수
   void onSavePressed() {
+    if(formKey.currentState!.validate()){ // 폼 검증하기
+      formKey.currentState!.save(); // 폼 저장하기
 
+      print(startTime); // 시작 시간 출력
+      print(endTime);   // 종료 시간 출력
+      print(content);   // 내용 출력
+    }
   }
+
   // 미리 정의해둔 함수
   String? timeValidator(String? val) {  // 시간 검증 함수
     if (val == null) {
