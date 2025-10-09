@@ -19,7 +19,10 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
       child: Container(
         // 화면에 반 높이에 키보드 높이 추가하기
         height: MediaQuery.of(context).size.height / 2 + bottomInset, //
-        
+        color: Colors.white,
+        child: Padding(
+          padding: EdgeInsets.only(left: 8, right: 8, top: 8, bottom: bottomInset), // 패딩에 키보드 높이 추가해서 위젯 전반적으로 위로 올려주
+        )
       )
     )
   }
