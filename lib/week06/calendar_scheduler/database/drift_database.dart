@@ -17,7 +17,7 @@ part 'drift_database.g.dart';   // part 파일 지정
 
 class LocalDatabase extends _$LocalDatabase {
   LocalDatabase() : super(_openConnection());
-  
+
   Stream<List<Schedule>> watchSchedules(DateTime data) =>
   // 데이터를 조회하고 변화 감지
     (select(schedules)..where((tbl) => tbl.date.equals(date))).watch();
@@ -35,3 +35,14 @@ class LocalDatabase extends _$LocalDatabase {
   int get schemaVersion => 1;
 }
 // Code Generation으로 생성할 클래스 상속
+
+// LocalDatabase 클래스 아래에 작성
+LazyDatabase _openConnection() {
+  return LazyDatabase(() async {
+
+    // 데이터베이스 파일 저장할 폴더
+    final dbFolder = await getApplicationDocumentsDirectory();
+    final file = File(p.join(dbFolder.path, 'db.sqlite'));
+    return NativeDatabase(file);
+  });
+}
