@@ -115,6 +115,7 @@ class _ScheduleBottomSheetState extends State<ScheduleBottomSheet> {
         ),
       );
 
+      Navigator.of(context).pop();  // 일정 생성 후 화면 뒤로 가기
     }
   }
 
